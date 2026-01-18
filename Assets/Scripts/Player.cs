@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        float kScale = GameParams.IsGameOver ? 0 : 1;
+        float kScale = GameParams.Instance.IsGameOver ? 0 : 1;
         float forceValue = this._jumpPower * kScale;
         this._rigidBody2D.linearVelocityY = forceValue;
     }
