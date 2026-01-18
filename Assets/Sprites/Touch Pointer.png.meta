@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed68c8aae7b500e4eb820857d2de43ea
+guid: 1f41f8c526dc16b4abb9a9937d967614
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3043212234144720249
-    second: birds_0
+      213: 7272126951779148353
+    second: Touch Pointer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: birds_0
+      name: Touch Pointer_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 700
-        height: 700
+        width: 512
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78a5eafb89654c5d0800000000000000
-      internalID: -3043212234144720249
+      spriteID: 142275aeee8cbe460800000000000000
+      internalID: 7272126951779148353
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      birds_0: -3043212234144720249
+      Touch Pointer_0: 7272126951779148353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
