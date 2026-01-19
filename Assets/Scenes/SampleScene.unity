@@ -1650,7 +1650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543280199}
   - component: {fileID: 1543280198}
-  - component: {fileID: 1543280197}
+  - component: {fileID: 1543280200}
   m_Layer: 0
   m_Name: GameParams
   m_TagString: Untagged
@@ -1658,39 +1658,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1543280197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543280196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2bd3c987a1a3e47acdd466af2e8b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyEvent
-  _eventsOnStart:
-    m_PersistentCalls:
-      m_Calls: []
-  _keyUpItems: []
-  _keyDownItems:
-  - keyCode: 32
-    _events:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 771881644}
-          m_TargetAssemblyTypeName: Player, Assembly-CSharp
-          m_MethodName: Jump
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1543280198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,6 +1704,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _pauseOnAwake: 0
+  _gameSpeed: 1
+  _maxGameSpeed: 1.5
 --- !u!4 &1543280199
 Transform:
   m_ObjectHideFlags: 0
@@ -1754,6 +1723,36 @@ Transform:
   - {fileID: 1795030696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543280200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543280196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ebc9b2122a65244a6e67dc865100b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntervalTimer
+  _intervalTime: 10
+  _events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1543280198}
+        m_TargetAssemblyTypeName: GameParams, Assembly-CSharp
+        m_MethodName: UpGameSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _invokeOnStart: 0
+  _startOnStart: 1
 --- !u!1 &1582641457
 GameObject:
   m_ObjectHideFlags: 0
