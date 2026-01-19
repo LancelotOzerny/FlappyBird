@@ -406,7 +406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da346fe4db712943a7d4492dc1bbbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tune
+  _eventsOnStart:
+    m_PersistentCalls:
+      m_Calls: []
   _moveSpeed: 5
+  _yPosRandInterval: 2.5
 --- !u!222 &6928099257908782444
 CanvasRenderer:
   m_ObjectHideFlags: 0
