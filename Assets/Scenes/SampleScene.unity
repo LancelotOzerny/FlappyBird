@@ -650,6 +650,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 822074717}
+          m_TargetAssemblyTypeName: CounterSaver, Assembly-CSharp
+          m_MethodName: SaveGreather
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   _triggerExitItems:
   - tag: ScorePoint
     events:
@@ -680,6 +692,7 @@ GameObject:
   - component: {fileID: 822074715}
   - component: {fileID: 822074714}
   - component: {fileID: 822074716}
+  - component: {fileID: 822074717}
   m_Layer: 5
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -819,6 +832,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Counter
   _before: 'Score: '
+--- !u!114 &822074717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822074712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d38a7339ed6b94b95590b466ff641c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CounterSaver
+  _prefName: score
 --- !u!1 &921403806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3009984634422553162, guid: aefcaa258a8f9a2449718c138534a571, type: 3}
+  m_Sprite: {fileID: 7272126951779148353, guid: 1f41f8c526dc16b4abb9a9937d967614, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1484,7 +1510,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameParams
   _startEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1588982609}
+        m_TargetAssemblyTypeName: CounterSaver, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _pauseOnEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1618,8 +1656,10 @@ GameObject:
   - component: {fileID: 1588982606}
   - component: {fileID: 1588982608}
   - component: {fileID: 1588982607}
+  - component: {fileID: 1588982610}
+  - component: {fileID: 1588982609}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: best score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1744,6 +1784,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588982605}
   m_CullTransparentMesh: 1
+--- !u!114 &1588982609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588982605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d38a7339ed6b94b95590b466ff641c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CounterSaver
+  _prefName: score
+--- !u!114 &1588982610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588982605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c10bb655f54dc49a3a45d6ff020618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Counter
+  _before: 'Best Score: '
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
