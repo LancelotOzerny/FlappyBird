@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private float _savedVelocityY;
     private bool _isPausedMode = false;
 
+    private Animator _anim;
+
     private void Start()
     {
         SetPauseMode();
@@ -19,6 +21,12 @@ public class Player : MonoBehaviour
     {
         this._rigidBody2D = this.gameObject.AddComponent<Rigidbody2D>();
         this._rigidBody2D.gravityScale = this._gravityScale;
+        this._anim = GetComponent<Animator>();
+    }
+
+    private void FixedUpdate()
+    {
+        _anim.SetBool("IsFail", _rigidBody2D.linearVelocityY <= 0f);
     }
 
     public void Jump()
