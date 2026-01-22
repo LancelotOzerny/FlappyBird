@@ -30,7 +30,7 @@ public class InfinityBackground : MonoBehaviour
             return;
         }
 
-        Current.PosX -= this._moveSpeed * Time.deltaTime * (GameParams.Instance.IsPause ? 0 : 1);
+        Current.PosX -= this._moveSpeed * Time.deltaTime * (GameParams.Instance.IsPause ? 0 : 1) * GameParams.Instance.GameSpeed;
         Next.PosX = Current.RightSideX;
 
         float rightSideX = Current.GetRightScreenX(Camera.main);

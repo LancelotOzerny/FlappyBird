@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &771881642
 SpriteRenderer:
   serializedVersion: 2
@@ -1226,6 +1226,18 @@ MonoBehaviour:
           m_StringArgument: Fade
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1543280200}
+        m_TargetAssemblyTypeName: IntervalTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fade
+          m_BoolArgument: 0
+        m_CallState: 2
   _upHandler:
     m_PersistentCalls:
       m_Calls: []
@@ -1339,95 +1351,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1106343879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1106343880}
-  - component: {fileID: 1106343881}
-  m_Layer: 0
-  m_Name: OffPauseBySpace
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1106343880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106343879}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1543280199}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1106343881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106343879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2bd3c987a1a3e47acdd466af2e8b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyEvent
-  _eventsOnStart:
-    m_PersistentCalls:
-      m_Calls: []
-  _keyUpItems: []
-  _keyDownItems:
-  - keyCode: 32
-    _events:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1543280198}
-          m_TargetAssemblyTypeName: GameParams, Assembly-CSharp
-          m_MethodName: set_IsPause
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 921403808}
-          m_TargetAssemblyTypeName: MonoBehaviourExt, Assembly-CSharp
-          m_MethodName: PlayAnim
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Fade
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1106343881}
-          m_TargetAssemblyTypeName: KeyEvent, Assembly-CSharp
-          m_MethodName: Destroy
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Fade
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1427703258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,8 +1651,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _pauseOnAwake: 0
-  _gameSpeed: 1
-  _maxGameSpeed: 1.5
+  _gameSpeed: 5
+  _maxGameSpeed: 2.35
 --- !u!4 &1543280199
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,7 +1666,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1106343880}
   - {fileID: 1795030696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1759,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ebc9b2122a65244a6e67dc865100b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntervalTimer
-  _intervalTime: 10
+  _intervalTime: 0.5
   _events:
     m_PersistentCalls:
       m_Calls:
@@ -1776,7 +1698,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _invokeOnStart: 0
-  _startOnStart: 1
+  _startOnStart: 0
 --- !u!1 &1582641457
 GameObject:
   m_ObjectHideFlags: 0

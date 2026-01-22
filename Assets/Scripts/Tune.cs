@@ -12,7 +12,7 @@ public class Tune : MonoBehaviourExt
 
     private void Update()
     {
-        TransformPosX -= Time.deltaTime * _moveSpeed * (GameParams.Instance.IsPause ? 0 : 1);
+        TransformPosX -= Time.deltaTime * _moveSpeed * (GameParams.Instance.IsPause ? 0 : 1) * GameParams.Instance.GameSpeed;
         if (TransformPosX < -16f)
         {
             this.Destroy();

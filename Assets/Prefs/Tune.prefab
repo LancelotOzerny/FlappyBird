@@ -410,7 +410,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _moveSpeed: 5
-  _yPosRandInterval: 2.5
+  _yPosRandInterval: 2.4
 --- !u!222 &6928099257908782444
 CanvasRenderer:
   m_ObjectHideFlags: 0
