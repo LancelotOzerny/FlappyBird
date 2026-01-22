@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         _anim.SetBool("IsFail", _rigidBody2D.linearVelocityY <= 0f);
+        this._rigidBody2D.gravityScale = this._gravityScale + GameParams.Instance.GameSpeed * 0.5f;
     }
 
     public void Jump()
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
             return;
         }
         
-        this._rigidBody2D.linearVelocityY = this._jumpPower;
+        this._rigidBody2D.linearVelocityY = this._jumpPower + GameParams.Instance.GameSpeed;
     }
 
     public void SetPauseMode()

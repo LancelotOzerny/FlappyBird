@@ -1651,8 +1651,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _pauseOnAwake: 0
-  _gameSpeed: 5
-  _maxGameSpeed: 2.35
+  _gameSpeed: 1
+  _maxGameSpeed: 2
 --- !u!4 &1543280199
 Transform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ebc9b2122a65244a6e67dc865100b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntervalTimer
-  _intervalTime: 0.5
+  _intervalTime: 5
   _events:
     m_PersistentCalls:
       m_Calls:
